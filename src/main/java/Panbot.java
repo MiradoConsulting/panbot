@@ -62,7 +62,7 @@ public class Panbot extends Robot {
 	 */
 	public void onHitByBullet(HitByBulletEvent e) {
 		turnRight(30);
-		back(10);
+		ahead(20);
 	}
 
 	/**
