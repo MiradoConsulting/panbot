@@ -64,7 +64,7 @@ public class Panbot extends Robot {
 	 * onHitByBullet: What to do when you're hit by a bullet
 	 */
 	public void onHitByBullet(HitByBulletEvent e) {
-		fire(2);
+		//
 	}
 
 	/**
