@@ -50,11 +50,6 @@ public class Panbot extends Robot {
 		ahead(40);
 	}
 
-
-	public void onBulletHit(BulletHitBulletEvent event) {
-		fire(2);
-	}
-
 	public void onBulletMissed(BulletMissedEvent event) {
 		scan();
 		out.println("Drat, I missed.");
