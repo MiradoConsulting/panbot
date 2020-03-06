@@ -14,7 +14,6 @@ public class Panbot extends Robot {
 			turnRight(10);
 			ahead(30);
 			turnGunRight(360);
-			back(20);
 			turnGunRight(360);
 		}
 	}
@@ -34,7 +33,6 @@ public class Panbot extends Robot {
 		}
 
 		turnRight(e.getBearing());
-		ahead(e.getDistance() + 5);
 		scan();
 	}
 
@@ -53,7 +51,6 @@ public class Panbot extends Robot {
 			fire(2);
 		} else
 			fire(1);
-		ahead(40);
 	}
 
 	public void onBulletMissed(BulletMissedEvent event) {
@@ -71,6 +68,6 @@ public class Panbot extends Robot {
 	 * onHitWall: What to do when you hit a wall
 	 */
 	public void onHitWall(HitWallEvent e) {
-		back(10);
+		back(15);
 	}	
 }
