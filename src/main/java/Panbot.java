@@ -21,7 +21,12 @@ public class Panbot extends Robot {
 
 
 	public void onScannedRobot(ScannedRobotEvent e) {
-		fire(2);
+
+		if (e.getDistance() > 100) {
+			fire(1);
+		}  else {
+			fire(2);
+		}
 		if (e.getBearing() >= 0) {
 			turnDirection = 1;
 		} else {
@@ -34,6 +39,7 @@ public class Panbot extends Robot {
 	}
 
 	public void onHitRobot(HitRobotEvent e) {
+
 		if (e.getBearing() >= 0) {
 			turnDirection = 1;
 		} else {
@@ -42,7 +48,7 @@ public class Panbot extends Robot {
 		turnRight(e.getBearing());
 
 		if (e.getEnergy() > 60) {
-			fire(3);
+			fire(5);
 		} else if (e.getEnergy() > 30) {
 			fire(2);
 		} else
